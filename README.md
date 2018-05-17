@@ -4,10 +4,10 @@ Softheon Forms provides Angular developers pre defined form components so develo
 ---
 ## **Quick Links**
 
-* [Getting Started](##Getting-Started)
-* [Components](##Components)
-    * [Name Component](##Name-Component)
-    * [Address Component](##Adress-Component)
+* [Getting Started](#getting-started)
+* [Components](#components)
+    * [Name Component](#name-component)
+    * [Address Component](#adress-component)
 * [NPM Repository](https://www.npmjs.com/package/@softheon/forms)
 ---
 ## **Getting Started**
