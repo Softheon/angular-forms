@@ -65,7 +65,17 @@ export class MyCustomSoftheonFormsModule { }
 import { SofNameModule } from '@softheon/softheon-forms';
 ```
 
-### **Additional Classes**
+#### **Properties**
+| Name | Description |
+| :--- | :---------- |
+| name: Name | The name model  |
+| required: boolean | Whether first and last name should be required. Default to true |
+| showMiddle: boolean | Whether middle name should be shown. Default is true |
+| showSuffix: boolean | Whether suffix should be shown. Default is true. |
+| suffixOptions: Suffix[] | Array of suffixes to choose from. Defaults to Jr, Sr, III and IV |
+| id: string | ID used to differentiate a component when multiple instances appear on the same page |
+
+#### **Additional Classes**
 
 #### **Name**
 
@@ -97,18 +107,6 @@ export enum Suffix {
 ```
 
 ---
-
-#### **Name Component**
-
-#### **Properties**
-| Name | Description |
-| :--- | :---------- |
-| name: Name | The name model  |
-| required: boolean | Whether first and last name should be required. Default to true |
-| showMiddle: boolean | Whether middle name should be shown. Default is true |
-| showSuffix: boolean | Whether suffix should be shown. Default is true. |
-| suffixOptions: Suffix[] | Array of suffixes to choose from. Defaults to Jr, Sr, III and IV |
-| id: string | ID used to differentiate a component when multiple instances appear on the same page |
 
 ### **Address Component**
 
