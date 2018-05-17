@@ -1,27 +1,121 @@
-# SoftheonAngularForms
+# Softheon Forms
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+Softheon Forms provides Angular developers pre defined form components so developers can quickly create forms in their web applications. 
+---
+## **Quick Links**
 
-## Development server
+* [Getting Started](##Getting-Started)
+* [Components](##Components)
+    * [Name Component](##Name-Component)
+    * [Address Component](##Adress-Component)
+* [NPM Repository](https://www.npmjs.com/package/@softheon/forms)
+---
+## **Getting Started**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### **Step 1: Install Softheon Forms**
 
-## Code scaffolding
+#### First you need to log into Softheon's NPM repository.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```shell
+npm login
+```
 
-## Build
+#### Next you need to install the package.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```shell
+npm install --save @softheon/forms@latest
+```
 
-## Running unit tests
+### **Step 2: Install the component modules**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Import the NgModule for each component you want to use:
 
-## Running end-to-end tests
+```TypeScript
+import { SofNameModule, SofAddressModule } from '@softheon/softheon-forms';
+@NgModule({
+    ...
+    imports: [SofNameModule, SofAddressModule]
+    ...
+})
+export class MyAppModule { }
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Alternatively, you can create a separate NgModule that imports all of the Angular Material components that you will use in your application. Then you can include this module wherever you'd like to use the components.
 
-## Further help
+```TypeScript
+import { SofNameModule, SofAddressModule } from '@softheon/softheon-forms';
+@NgModule({
+    ...
+    imports: [SofNameModule, SofAddressModule],
+    exports: [SofNameModule, SofAddressModule]
+    ...
+})
+export class MyCustomSoftheonFormsModule { }
+```
+---
+## **Components**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### **Name Component**
+
+#### `<softheon-form-name>` is a component used to wrap several Softheon inputs together which allows a user to enter their full name.
+
+#### API reference for Softheon Form Name component
+
+```TypeScript
+import { SofNameModule } from '@softheon/softheon-forms';
+```
+
+### **Additional Classes**
+
+#### **Name**
+
+---
+
+#### Properties
+
+| Name | Description |
+| :--- | ----------- |
+| firstName: string | The first name |
+| middleName?: string | The middle name |
+| lastName: string | The last name |
+| suffix?: Suffix | The suffix |
+
+#### **Suffix**
+
+---
+
+#### Enumeration of suffixes:
+
+```TypeScript
+export enum Suffix {
+    Jr = "Jr.",
+    Sr = "Sr.",
+    Ii = "II",
+    Iii = "III",
+    Iv = "IV"
+  }
+```
+
+---
+
+#### **Name Component**
+
+#### **Properties**
+| Name | Description |
+| :--- | :---------- |
+| name: Name | The name model  |
+| required: boolean | Whether first and last name should be required. Default to true |
+| showMiddle: boolean | Whether middle name should be shown. Default is true |
+| showSuffix: boolean | Whether suffix should be shown. Default is true. |
+| suffixOptions: Suffix[] | Array of suffixes to choose from. Defaults to Jr, Sr, III and IV |
+| id: string | ID used to differentiate a component when multiple instances appear on the same page |
+
+### **Address Component**
+
+Coming Soon
+
+
+
+
+
+

@@ -5,8 +5,7 @@ import { MatInputModule, MatFormFieldModule, MatSelectModule } from '@angular/ma
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { SoftheonFormsComponent } from './softheon-forms.component';
-import { NameComponent } from './name/name.component';
+import { NameComponent } from './name.component';
 
 @NgModule({
   imports: [
@@ -19,7 +18,7 @@ import { NameComponent } from './name/name.component';
     MatSelectModule,
     FlexLayoutModule
   ],
-  declarations: [SoftheonFormsComponent, NameComponent],
-  exports: [SoftheonFormsComponent, NameComponent]
+  declarations: [NameComponent],
+  exports: [NameComponent]
 })
-export class SoftheonFormsModule { }
+export class SofNameModule { }

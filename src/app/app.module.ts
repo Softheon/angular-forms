@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { SoftheonFormsModule } from 'softheon-forms';
+import { SofNameModule  } from 'softheon-forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,7 @@ import { SoftheonFormsModule } from 'softheon-forms';
   ],
   imports: [
     BrowserModule,
-    SoftheonFormsModule
+    SofNameModule
   ],
   providers: [],
   bootstrap: [AppComponent]
