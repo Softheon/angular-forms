@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { SofNameModule, SofSocialSecurityNumberModule  } from 'softheon-forms';
+import { SofNameModule, SofSocialSecurityNumberModule, SofDatePickerModule } from 'softheon-forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,8 @@ import { SofNameModule, SofSocialSecurityNumberModule  } from 'softheon-forms';
   imports: [
     BrowserModule,
     SofNameModule,
-    SofSocialSecurityNumberModule
+    SofSocialSecurityNumberModule,
+    SofDatePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

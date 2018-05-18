@@ -99,7 +99,24 @@ Coming Soon
 
 ### **Date Picker Component**
 
-Coming Soon
+#### `<softheon-form-date-picker>` is a component used for creating an input that allows a user to select a date using a calendar.
+
+#### API reference for Softheon Form Date Picker Component
+
+```TypeScript
+import { SofDatePickerModule } from '@softheon/softheon-forms';
+```
+
+#### **Properties**
+| Name | Description |
+| :--- | :---------- |
+| date: Date | The Date model  |
+| required: boolean | Whether the date is required. Default to true |
+| id: string | ID used to differentiate a component when multiple instances appear on the same page |
+| placeholder: string | Placeholder text for the date picker input |
+| maxDate: Date | The maximum date the date picker should allow. Default is null |
+| minDate: Date | The minimum date the date picker should allow. Default is null |
+| startAt: Date | The date the date picker should start with |
 
 ---
 
@@ -113,7 +130,7 @@ Coming Soon
 
 #### `<softheon-form-name>` is a component used to wrap several Softheon inputs together which allows a user to enter their full name.
 
-#### API reference for Softheon Form Name component
+#### API reference for Softheon Form Name Component
 
 ```TypeScript
 import { SofNameModule } from '@softheon/softheon-forms';
@@ -178,7 +195,7 @@ Coming Soon
 
 #### `<softheon-form-ssn>` is a component used to collect a user's social security number. It automatically supports masking the user's social security number as well.
 
-#### API reference for Softheon Social Security Number component
+#### API reference for Softheon Social Security Number Component
 
 ```TypeScript
 import { SofSocialSecurityNumberModule } from '@softheon/softheon-forms';

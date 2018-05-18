@@ -1,10 +1,10 @@
-import { SocialSecurityNumberModule } from './social-security-number.module';
+import { SofSocialSecurityNumberModule } from './social-security-number.module';
 
 describe('SocialSecurityNumberModule', () => {
-  let socialSecurityNumberModule: SocialSecurityNumberModule;
+  let socialSecurityNumberModule: SofSocialSecurityNumberModule;
 
   beforeEach(() => {
-    socialSecurityNumberModule = new SocialSecurityNumberModule();
+    socialSecurityNumberModule = new SofSocialSecurityNumberModule();
   });
 
   it('should create an instance', () => {
