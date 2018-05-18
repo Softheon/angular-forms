@@ -4,6 +4,7 @@ import { MatInputModule, MatFormFieldModule, MatDatepickerModule } from '@angula
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { DatePickerComponent } from './date-picker.component';
 import { Browser } from 'protractor';
@@ -16,7 +17,8 @@ import { Browser } from 'protractor';
     MatDatepickerModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    FlexLayoutModule
   ],
   declarations: [DatePickerComponent],
   exports: [DatePickerComponent]
