@@ -6,8 +6,20 @@ Softheon Forms provides Angular developers pre defined form components so develo
 
 * [Getting Started](#getting-started)
 * [Components](#components)
-    * [Name Component](#name-component)
-    * [Address Component](#adress-component)
+    * [Address](#adress-component)
+    * [Alert](#alert)
+    * [Amount](#amount)
+    * [Checkbox Validator](#checkbox-validator)
+    * [Currency](#currency)
+    * [Date Picker](#date-picker)
+    * [Email](#email)
+    * [Name](#name-component)
+    * [Phone Number](#phone-number)
+    * [Relationship](#relationship)
+    * [Social Security Number](#social-security-number)
+    * [State](#state)
+    * [Status Frame](#status-frame
+    
 * [NPM Repository](https://www.npmjs.com/package/@softheon/forms)
 ---
 ## **Getting Started**
@@ -54,6 +66,48 @@ export class MyCustomSoftheonFormsModule { }
 ```
 ---
 ## **Components**
+
+### **Address Component**
+
+Coming Soon
+
+---
+
+### **Alert Component**
+
+Coming Soon
+
+---
+
+### **Amount Component**
+
+Coming Soon
+
+---
+
+### **Checkbox Validator Component**
+
+Coming Soon
+
+---
+
+### **Currency Component**
+
+Coming Soon
+
+---
+
+### **Date Picker Component**
+
+Coming Soon
+
+---
+
+### **Email Component**
+
+Coming Soon
+
+---
 
 ### **Name Component**
 
@@ -108,12 +162,30 @@ export enum Suffix {
 
 ---
 
-### **Address Component**
+### **Phone Number Component**
 
 Coming Soon
 
+---
 
+### **Relationship Component**
 
+Coming Soon
 
+---
 
+### **Social Security Number Component**
 
+Coming Soon
+
+---
+
+### **State Component**
+
+Coming Soon
+
+---
+
+### **Status Frame Component**
+
+Coming Soon
