@@ -176,7 +176,21 @@ Coming Soon
 
 ### **Social Security Number Component**
 
-Coming Soon
+#### `<softheon-form-ssn>` is a component used to collect a user's social security number. It automatically supports masking the user's social security number as well.
+
+#### API reference for Softheon Social Security Number component
+
+```TypeScript
+import { SofSocialSecurityNumberModule } from '@softheon/softheon-forms';
+```
+
+#### **Properties**
+| Name | Description |
+| :--- | :---------- |
+| ssn: string | The social security number model  |
+| required: boolean | Whether the social security number should be required. Default to true |
+| id: string | ID used to differentiate a component when multiple instances appear on the same page |
+| ssnChange: EventEmitter<string> | Social security number change event emitter |
 
 ---
 
