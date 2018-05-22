@@ -19,7 +19,9 @@ Softheon Forms provides Angular developers pre defined form components so develo
     * [Social Security Number](#social-security-number-component)
     * [State](#state-component)
     * [Status Frame](#status-frame-component)
-    
+* [Directives](#directives)
+    * [Number of Digits](#number-of-digits-directive)
+    * [Provide Parent Form](#provide-parent-form-directive)
 * [NPM Repository](https://www.npmjs.com/package/@softheon/forms)
 ---
 ## **Getting Started**
@@ -220,3 +222,42 @@ Coming Soon
 ### **Status Frame Component**
 
 Coming Soon
+
+## **Directives**
+
+### **Number of Digits Directive**
+
+#### `[numberOfDigits]` is a directive for validating the input has the required number of digits.
+
+#### API reference for Number of Digits Directive
+
+```TypeScript
+import { SofDirectiveModule } from '@softheon/softheon-forms';
+```
+
+#### Example
+
+```HTML
+<input id="ssn" placeholder="Social Security Number" [numberOfDigits]="9"/>
+```
+
+---
+
+### **Provide Parent Form Directive**
+
+#### `[provide-parent-form]` is a directive that allows the parent form to be passed to the child. 
+
+#### API reference for Provide Parent Form Directive
+
+```TypeScript
+import { SofDirectiveModule } from '@softheon/softheon-forms';
+```
+
+#### Example
+
+```HTML
+<form #theForm="ngForm">
+    <div provide-parent-form>        
+    </div>
+</form>
+```
