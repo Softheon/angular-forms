@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';  
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { SofDirectiveModule } from '../directives/directives.module';
 
 import { NameComponent } from './name.component';
 
@@ -11,7 +13,7 @@ import { NameComponent } from './name.component';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
+    SofDirectiveModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,

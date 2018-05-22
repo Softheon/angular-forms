@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { SofDirectiveModule } from '../directives/directives.module';
+
 import { DatePickerComponent } from './date-picker.component';
 import { Browser } from 'protractor';
 
@@ -18,7 +20,8 @@ import { Browser } from 'protractor';
     FormsModule,
     BrowserAnimationsModule,
     MatMomentDateModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SofDirectiveModule
   ],
   declarations: [DatePickerComponent],
   exports: [DatePickerComponent]
