@@ -28,17 +28,17 @@ Softheon Forms provides Angular developers pre defined form components so develo
 
 ### **Step 1: Install Softheon Forms**
 
-#### First you need to log into Softheon's NPM repository.
-
-```shell
-npm login
-```
-
-#### Next you need to install the package.
+#### Install the package.
 
 ```shell
 npm install --save @softheon/forms@latest
 ```
+
+#### Include a link to Softheon Workshop
+
+```html
+<link rel="stylesheet" ref="https://softheonworkshop.azureedge.net/alpha-9-5/workshop.min.css">
+```  
 
 ### **Step 2: Install the component modules**
 
@@ -77,7 +77,20 @@ Coming Soon
 
 ### **Alert Component**
 
-Coming Soon
+#### `<softheon-form-alert>` is a component used for displaying an alert message to the user
+
+#### API reference for Softheon Form Alert Component
+
+```TypeScript
+import { SofAlertModule } from '@softheon/softheon-forms';
+```
+
+#### **Properties**
+| Name | Description |
+| :--- | :---------- |
+| text: string | The alert message to display  |
+| show: boolean | Whether the alert message should be shown. Default is true |
+| align: string | The HTML alignment of the component. Can be left, center, or right. Default is center |
 
 ---
 
