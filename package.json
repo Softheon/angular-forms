@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng build --prod --project=softheon-forms && ng serve",
-    "build": "ng build --prod --project=softheon-forms",
+    "start": "npm build && ng serve",
+    "build": "ng build --prod --project=softheon-forms && npm run copy",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "copy": "copy README.md dist\\softheon-forms && copy LICENSE dist\\softheon-forms"
   },
   "private": true,
   "dependencies": {

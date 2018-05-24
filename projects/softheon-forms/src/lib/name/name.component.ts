@@ -55,7 +55,7 @@ export class NameComponent implements OnInit {
    */
   public ngOnInit(): void {
     if (!this.name) {
-      this.name = new Name();
+      return;
     }
     // If the provided suffix is not in the list of suffix options, clear out the value
     else if (this.name.suffix && !this.suffixOptions.find(s => s == this.name.suffix)) {

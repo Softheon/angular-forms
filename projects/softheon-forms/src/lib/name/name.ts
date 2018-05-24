@@ -3,16 +3,16 @@ import { Suffix } from "./suffix.enum"
 /**
  * Contains a name object
  */
-export class Name {
+export interface Name {
   /** The first name */
-  public firstName: string = "";
+  firstName: string;
 
   /** The middle name */
-  public middleName?: string = "";
+  middleName?: string;
 
   /** The last name */
-  public lastName: string = "";
+  lastName: string;
 
   /** The suffix */
-  public suffix?: Suffix;
+  suffix?: Suffix;
 }

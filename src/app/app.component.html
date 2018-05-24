@@ -1,9 +1,10 @@
 <form #theForm="ngForm">
-    <softheon-form-name></softheon-form-name>
-    <softheon-form-name [showMiddle]="false"></softheon-form-name>
-    <softheon-form-name [showSuffix]="false"></softheon-form-name>
+    <softheon-form-name [name]="person"></softheon-form-name>
+    <softheon-form-name [name]="person" [showMiddle]="false"></softheon-form-name>
+    <softheon-form-name [name]="person" [showSuffix]="false"></softheon-form-name>
     <softheon-form-ssn></softheon-form-ssn>
     <softheon-form-date-picker [placeholder]="'Birth Date'" [maxDate]="maxDate"></softheon-form-date-picker>
+    <softheon-form-address [address]="person"></softheon-form-address>
 </form>
 
 <softheon-form-alert [text]="'THIS IS A TEST MESSAGE'"></softheon-form-alert>
