@@ -10,7 +10,9 @@ import {
   SofDatePickerModule,
   SofDirectiveModule,
   SofAlertModule,
-  SofAddressModule
+  SofAddressModule,
+  SofPhoneNumberModule
+
 } from 'softheon-forms';
 
 @NgModule({
@@ -25,7 +27,8 @@ import {
     FormsModule,
     SofDirectiveModule,
     SofAlertModule,
-    SofAddressModule
+    SofAddressModule,
+    SofPhoneNumberModule
   ],
   providers: [],
   bootstrap: [AppComponent]

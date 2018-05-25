@@ -1,10 +1,10 @@
-import { AddressModule } from './address.module';
+import { SofAddressModule } from './address.module';
 
 describe('AddressModule', () => {
-  let addressModule: AddressModule;
+  let addressModule: SofAddressModule;
 
   beforeEach(() => {
-    addressModule = new AddressModule();
+    addressModule = new SofAddressModule();
   });
 
   it('should create an instance', () => {

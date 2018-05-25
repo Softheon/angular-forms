@@ -1,0 +1,35 @@
+<div fxLayout="row wrap" fxLayoutGap="5px" provide-parent-form>
+  <mat-form-field *ngIf="showCallingCode" class="calling-code" fxFlex="100%" fxFlex.gt-sm="25%">
+    <input id="callingCode{{id}}" name="callingCode{{id}}" matInput callingCode placeholder="Calling Code" [matAutocomplete]="auto" [(ngModel)]="phoneNumber.displayName" (ngModelChange)="tdCallingCodes = filterCallingCodes(phoneNumber.displayName);" #callingCodeSelector="ngModel" [required]="required" />
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let callingCode of tdCallingCodes" value="{{callingCode.name}}&nbsp;+{{callingCode.callingCode}}">
+        {{callingCode.name}}&nbsp;+{{callingCode.callingCode}}
+      </mat-option>
+    </mat-autocomplete>
+    <mat-error *ngIf="callingCodeSelector?.errors?.required">
+      Calling code is required.
+    </mat-error>
+    <mat-error *ngIf="callingCodeSelector?.errors?.invalid">
+      Calling code is invalid.
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field fxFlex.lt-md="100%" fxFlex.gt-sm="1 1 auto">
+    <input name="phoneNumber{{id}}" id="phoneNumber{{id}}" matInput placeholder="Phone Number" [textMask]="{mask: getPhoneMask()}" [required]="required" [(ngModel)]="phoneNumber.phoneNumber" #phoneSelector="ngModel" [numberOfDigits]="determineDigits()" maxlength="16" />
+    <mat-error *ngIf="phoneSelector?.errors?.required">
+      Phone Number is required.
+    </mat-error>
+    <mat-error *ngIf="phoneSelector?.errors?.invalid">
+      Phone Number is invalid.
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field *ngIf="showExtensionCode" fxFlex.lt-md="100%" fxFlex.gt-sm="120px">
+    <input name="extensionCode{{id}}" id="extensionCode{{id}}" matInput placeholder="Extension Code" [(ngModel)]="phoneNumber.extensionCode" #extensionCodeSelector="ngModel" [numbersOnly]="true" maxlength="5" />
+  </mat-form-field>
+  <mat-form-field fxFlex.lt-md="100%" fxFlex.gt-sm="120px" *ngIf="showPhoneType">
+    <mat-select id="phoneType{{id}}" name="phoneType{{id}}" placeholder="Phone Type" [(ngModel)]="phoneNumber.type" [required]="required">
+      <mat-option *ngFor="let type of typeOptions" [value]="type">
+        <span *ngIf="type">{{type}}</span>
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

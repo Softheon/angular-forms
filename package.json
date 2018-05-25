@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm build && ng serve",
+    "start": "npm run-script build && ng serve",
     "build": "ng build --prod --project=softheon-forms && npm run copy",
     "test": "ng test",
     "lint": "ng lint",
@@ -25,7 +25,6 @@
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
-    "@softheon/forms": "^1.5.4",
     "angular2-text-mask": "^8.0.0",
     "core-js": "^2.5.4",
     "moment": "^2.22.1",

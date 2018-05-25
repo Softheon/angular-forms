@@ -23,6 +23,7 @@ Softheon Forms provides Angular developers pre defined form components so develo
     * [Letters Only](#letters-only-directive)
     * [Number of Digits](#number-of-digits-directive)
     * [Number of Digits Range](#number-of-digits-range-directive)
+    * [Numbers Only](#numbers-only-directive)
     * [Provide Parent Form](#provide-parent-form-directive)
 * [NPM Repository](https://www.npmjs.com/package/@softheon/forms)
 ---
@@ -81,7 +82,7 @@ export class MyCustomSoftheonFormsModule { }
 import { SofAddressModule } from '@softheon/forms';
 ```
 
-#### **Properties**
+#### Properties
 | Name | Description | Required | Default |
 | :- | :-| :- | :- |
 | address: Address | The address model. | Yes | Null |
@@ -96,7 +97,7 @@ import { SofAddressModule } from '@softheon/forms';
 
 ### **Additional Classes**
 
-#### **Address**
+#### Address
 
 #### API reference for Address
 
@@ -126,7 +127,7 @@ import { Address } from '@softheon/forms';
 import { SofAlertModule } from '@softheon/forms';
 ```
 
-#### **Properties**
+#### Properties
 | Name | Description | Required | Default |
 | :--- | :---------- | :-- | :-- |
 | text: string | The alert message to display.  | Yes | Null |
@@ -163,7 +164,7 @@ Coming Soon
 import { SofDatePickerModule } from '@softheon/forms';
 ```
 
-#### **Properties**
+#### Properties
 | Name | Description | Required | Default |
 | :--- | :---------- | :--- | :--- |
 | date: Date | The Date model.  | Yes | Null |
@@ -192,19 +193,19 @@ Coming Soon
 import { SofNameModule } from '@softheon/forms';
 ```
 
-#### **Properties**
+#### Properties
 | Name | Description | Required | Default |
 | :--- | :---------- | :---- | :---- |
 | name: Name | The Name model.  | Yes | Null |
 | required: boolean | Whether first and last name should be required. | No | True |
+| id: string | ID used to differentiate a component when multiple instances appear on the same page. | No | Empty String |
 | showMiddle: boolean | Whether middle name should be shown. | No | True |
 | showSuffix: boolean | Whether suffix should be shown. | No | True |
 | suffixOptions: Suffix[] | Array of suffixes to choose from. | No | Jr., Sr., III, IV |
-| id: string | ID used to differentiate a component when multiple instances appear on the same page. | No | Empty String |
 
 #### **Additional Classes**
 
-#### **Name**
+#### Name
 
 ---
 
@@ -217,7 +218,7 @@ import { SofNameModule } from '@softheon/forms';
 | lastName: string | The last name. |
 | suffix?: Suffix | The suffix. |
 
-#### **Suffix**
+#### Suffix
 
 ---
 
@@ -237,9 +238,64 @@ export enum Suffix {
 
 ### **Phone Number Component**
 
-Coming Soon
+#### `<softheon-form-phone-number>` is a component used to collect a user's phone number with options to include phone type, calling code and extension code as well.
 
+#### API reference for Softheon Phone Number Component
+
+```TypeScript
+import { SofPhoneNumberModule } from '@softheon/forms';
+```
+
+#### Properties
+| Name | Description | Required | Default |
+| :--- | :---------- | :--- | :--- |
+| phoneNumber: PhoneNumber | The phone number model. | Yes | Null |
+| required: boolean | Whether the phone number is required. | No | True |
+| id: string | ID used to differentiate a component when multiple instances appear on the same page. | No | Empty String |
+| showPhoneType: boolean | Whether to ask for the phone type. | No | True |
+| showCallingCode: boolean | Whether to ask for the calling code. | No | False |
+| showExtensionCode: boolean | Whether to show the extension code. | No | True |
+| placeholder: string | The placeholder text for the input. | No | Phone Number |
+| placeholderExt: string | The placeholder text for the extension code. | No | Extension Code |
+| placeholderType: string | The place older text for the phone type. | No | Phone Type |
+
+#### **Additional Classes**
+
+#### Phone Number
+
+This is the model for the phone number input. It includes the phone type, calling code, phone number and extension code.
+
+#### Properties
+
+| Name | Description |
+| :--- | ----------- |
+| type: PhoneType | The type of phone number. Usually can be work, mobile or home. |
+| callingCode: string | The calling code for the phone number. I.e. U.S.A is 1. |
+| callingCodeName: string | The country name for the calling code. |
+| phoneNumber: string | The phone number. |
+| extensionCode: string | The extension code. |
+
+#### Methods
+
+| Name | Description |
+| :--- | ----------- |
+| getCleanPhoneNumber(): string | Removes any paranthesis, hyphens, or spaces from the phone number. I.e. (012) 345-6789 => 0123456789 |
+| 
+
+#### Phone Type
+
+Enumeration of phone types:
+
+```TypeScript
+export enum PhoneType {
+    HOME = 'HOME',
+    WORK = 'WORK',
+    MOBILE = 'MOBILE'
+  }
+```
 ---
+
+#### Properties
 
 ### **Relationship Component**
 
@@ -277,6 +333,8 @@ Coming Soon
 
 Coming Soon
 
+---
+
 ## **Directives**
 
 You can import all of the directives listed below by importing the SofDirecteModule module or you can import the individual directives that you need.
@@ -284,6 +342,8 @@ You can import all of the directives listed below by importing the SofDirecteMod
 ```TypeScript
 import { SofDirectiveModule } from '@softheon/forms';
 ```
+
+---
 
 ### **Letters Only Directive**
 
@@ -300,6 +360,7 @@ import { LettersOnlyDirective } from '@softheon/forms';
 ```HTML
 <input id="name" placeholder="Forst Name" [lettersOnly]="true"/>
 ```
+---
 
 ### **Number of Digits Directive**
 
@@ -316,6 +377,7 @@ import { NumberOfDigitsDirective } from '@softheon/forms';
 ```HTML
 <input id="ssn" placeholder="Social Security Number" [numberOfDigits]="9"/>
 ```
+---
 
 ### **Number of Digits Range Directive**
 
@@ -336,6 +398,23 @@ import { NumberOfDigitsRangeDirective } from '@softheon/forms';
 
 ```HTML
 <input id="zipCode" placeholder="Zip Code" [numberOfDigitsRange]="zipCodeLengthRange"/>
+```
+---
+
+### **Numbers Only Directive**
+
+#### `[numbersOnly]` is a directive for allowing only numbers to be entered into an input.
+
+#### API reference for Numbers Only Directive
+
+```TypeScript
+import { NumbersOnlyDirective } from '@softheon/forms';
+```
+
+#### Example
+
+```HTML
+<input id="zipCode" placeholder="Zip Code" [numbersOnly]="true"/>
 ```
 
 ---

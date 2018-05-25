@@ -1,10 +1,10 @@
-import { StateModule } from './state.module';
+import { SofStateModule } from './state.module';
 
 describe('StateModule', () => {
-  let stateModule: StateModule;
+  let stateModule: SofStateModule;
 
   beforeEach(() => {
-    stateModule = new StateModule();
+    stateModule = new SofStateModule();
   });
 
   it('should create an instance', () => {

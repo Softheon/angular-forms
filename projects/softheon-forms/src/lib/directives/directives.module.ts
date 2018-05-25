@@ -6,6 +6,8 @@ import { NumberOfDigitsDirective } from './number-of-digits.directive';
 import { ProvideParentFormDirective } from './provide-parent-form.directive';
 import { LettersOnlyDirective } from './letters-only.directive';
 import { NumberOfDigitsRangeDirective } from './number-of-digits-range.directive';
+import { NumbersOnlyDirective } from './numbers-only.directive';
+import { CallingCodeDirective } from './calling-code.directive';
 
 @NgModule({
     imports: [
@@ -17,13 +19,17 @@ import { NumberOfDigitsRangeDirective } from './number-of-digits-range.directive
         NumberOfDigitsDirective,
         ProvideParentFormDirective,
         LettersOnlyDirective,
-        NumberOfDigitsRangeDirective
+        NumberOfDigitsRangeDirective,
+        NumbersOnlyDirective,
+        CallingCodeDirective
     ],
     exports: [
         NumberOfDigitsDirective,
         ProvideParentFormDirective,
         LettersOnlyDirective,
-        NumberOfDigitsRangeDirective
+        NumberOfDigitsRangeDirective,
+        NumbersOnlyDirective,
+        CallingCodeDirective
     ]
   })
   export class SofDirectiveModule { }
