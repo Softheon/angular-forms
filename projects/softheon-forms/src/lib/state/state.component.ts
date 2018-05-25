@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-import { States, State } from './states';
+import { States } from './states';
+import { State } from './state';
 
 /**
  * Displays input for US state code

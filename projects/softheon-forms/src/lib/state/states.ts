@@ -1,12 +1,4 @@
-/**
- * The USA state object
- */
-export class State {
-    /** The state name */
-    name: string;
-    /** The state abbreviation */
-    abbreviation: string;
-  }
+  import { State } from './state';
   
   /**
    * Constant for all states and abbreviations
