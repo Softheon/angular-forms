@@ -19,6 +19,7 @@ Softheon Forms provides Angular developers pre defined form components so develo
     * [Social Security Number](#social-security-number-component)
     * [State](#state-component)
     * [Status Frame](#status-frame-component)
+    * [Yes/No Question](#yes/no-question-component)
 * [Directives](#directives)
     * [Letters Only](#letters-only-directive)
     * [Number of Digits](#number-of-digits-directive)
@@ -349,6 +350,33 @@ import { SofStatusFrameModule } from '@softheon/forms';
 | showStatus: ``boolean`` | Whether to show the status based on form validity | No | True |
 | minimizable: ``boolean`` | Whether the status frame component can be minimized/collapsed | No | False |
 | isMinimized: ``EventEmitter<boolean>`` | Emits whether the status frame is minimized/collapsed | No | ``EventEmitter<boolean>`` |
+
+---
+
+### **Yes/No Question Component**
+
+#### `<softheon-form-yes-no-question>` is a component used to ask a general yes or no question.
+
+#### API reference for Yes/No Question Component
+
+```TypeScript
+import { SofYesNoQuestionModule } from '@softheon/forms';
+```
+
+#### **Properties**
+| Name | Description | Required | Default |
+| :--- | :---------- | :--- | :--- |
+| required: `boolean` | Whether the question requires an answer. | No | `True` | 
+| id: `string` | ID used to differentiate a component when multiple instances appear on the same page. | No | ``''`` |
+| label: `string` | The question to ask. | Yes | `Null` |
+| tooltip: `string` | The text to be displayed in the tool-tip. | No | `Null` |
+| yesText: `string` | The text to display for the true option. | No | `Yes` |
+| noText: `string` | The text to display for the false option. | No | `No` |
+| switchOrder: `boolean` | If true, the false option will be shown first. | No | `False` |
+| hasUnknown: `boolean` | Whether there should be an unkonwn option. | No | `False` |
+| booleanChange: `EventEmitter<boolean>` | The boolean output event. | No | `EventEmitter<boolean>` |
+| unknownChange: `EventEmitter<boolean>` | The unkonwn boolean output event. | No | `EventEmitter<boolean>` |
+| onChange: `EventEmitter<boolean>` | Event to hook into on change events. | No | `EventEmitter<boolean>` |
 
 ---
 

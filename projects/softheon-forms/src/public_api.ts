@@ -45,3 +45,7 @@ export * from './lib/phone-number/phone-number.module';
 /** Status Frame Module  */
 export * from './lib/status-frame/status-frame.component';
 export * from './lib/status-frame/status-frame.module';
+
+/** Yes No Question Module */
+export * from './lib/yes-no-question/yes-no-question.component';
+export * from './lib/yes-no-question/yes-no-question.module';
