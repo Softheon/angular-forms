@@ -34,10 +34,14 @@ export * from './lib/address/address';
 export * from './lib/address/address.component';
 export * from './lib/address/address.module';
 
-// /** Phone Number Module */
+/** Phone Number Module */
 export * from './lib/phone-number/phone-type.enum';
 export * from './lib/phone-number/calling-code';
 export * from './lib/phone-number/calling-codes';
 export * from './lib/phone-number/phone-number';
 export * from './lib/phone-number/phone-number.component';
 export * from './lib/phone-number/phone-number.module';
+
+/** Status Frame Module  */
+export * from './lib/status-frame/status-frame.component';
+export * from './lib/status-frame/status-frame.module';

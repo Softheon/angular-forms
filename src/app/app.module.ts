@@ -11,7 +11,8 @@ import {
   SofDirectiveModule,
   SofAlertModule,
   SofAddressModule,
-  SofPhoneNumberModule
+  SofPhoneNumberModule,
+  SofStatusFrameModule
 
 } from 'softheon-forms';
 
@@ -28,7 +29,8 @@ import {
     SofDirectiveModule,
     SofAlertModule,
     SofAddressModule,
-    SofPhoneNumberModule
+    SofPhoneNumberModule,
+    SofStatusFrameModule
   ],
   providers: [],
   bootstrap: [AppComponent]

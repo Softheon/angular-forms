@@ -85,15 +85,15 @@ import { SofAddressModule } from '@softheon/forms';
 #### Properties
 | Name | Description | Required | Default |
 | :- | :-| :- | :- |
-| address: Address | The address model. | Yes | Null |
-| required: boolean | Whether the address is required. | No | True |
-| id: string | ID used to differentiate a component when multiple instances appear on the same page. | No |Empty String |
-| readonly: boolean | Whether the component should be readonly. | No | False |
-| showStreetName2: boolean | Whether to show Apt./Ste. input. | No | False |
-| disableState: boolean | Whether to disable the state. | No | False
-| defaultState: string | The default state. | No | Null |
-| showZipCodeExt: boolean | Whether to allow zip code to be greater than 5 digits. | No | True |
-| justZip: boolean | Whether only the zip code field should be shown. | No | False |
+| address: ``Address`` | The address model. | Yes | ``Null`` |
+| required: ``boolean`` | Whether the address is required. | No | ``True`` |
+| id: ``string ``| ID used to differentiate a component when multiple instances appear on the same page. | No | ``''`` |
+| readonly: ``boolean`` | Whether the component should be readonly. | No | ``False`` |
+| showStreetName2: ``boolean`` | Whether to show Apt./Ste. input. | No | ``False`` |
+| disableState: ``boolean`` | Whether to disable the state. | No | ``False``
+| defaultState: ``string`` | The default state. | No | ``Null`` |
+| showZipCodeExt: ``boolean`` | Whether to allow zip code to be greater than 5 digits. | No | ``True`` |
+| justZip: ``boolean`` | Whether only the zip code field should be shown. | No | ``False`` |
 
 ### **Additional Classes**
 
@@ -109,11 +109,11 @@ import { Address } from '@softheon/forms';
 
 | Name | Description |
 | :-- | :-- |
-| streeName1: string | The first line of the street address. |
-| streetName2: string | The second line of the street address. |
-| cityName: string | The name of the city where the address is located. |
-| stateCode: string | The two letter USPS State Code. |
-| zipCode: string | The full five or nine digit zip code |
+| streeName1: ``string`` | The first line of the street address. |
+| streetName2: ``string`` | The second line of the street address. |
+| cityName: ``string`` | The name of the city where the address is located. |
+| stateCode: ``string`` | The two letter USPS State Code. |
+| zipCode: ``string`` | The full five or nine digit zip code |
 
 ---
 
@@ -130,9 +130,9 @@ import { SofAlertModule } from '@softheon/forms';
 #### Properties
 | Name | Description | Required | Default |
 | :--- | :---------- | :-- | :-- |
-| text: string | The alert message to display.  | Yes | Null |
-| show: boolean | Whether the alert message should be shown. | No | True |
-| align: string | The HTML alignment of the component. Can be left, center, or right. | No | center |
+| text: ``string`` | The alert message to display.  | Yes | ``Null`` |
+| show: ``boolean`` | Whether the alert message should be shown. | No | ``True`` |
+| align: ``string`` | The HTML alignment of the component. Can be left, center, or right. | No | ``center`` |
 
 ---
 
@@ -167,13 +167,13 @@ import { SofDatePickerModule } from '@softheon/forms';
 #### Properties
 | Name | Description | Required | Default |
 | :--- | :---------- | :--- | :--- |
-| date: Date | The Date model.  | Yes | Null |
-| required: boolean | Whether the date is required. | No | True |
-| id: string | ID used to differentiate a component when multiple instances appear on the same page. | No | Empty String |
-| placeholder: string | Placeholder text for the date picker input. | Yes | Null |
-| maxDate: Date | The maximum date the date picker should allow. | No | Null |
-| minDate: Date | The minimum date the date picker should allow. | No | Null |
-| startAt: Date | The date the date picker should start with. | No | Null |
+| date: ``Date`` | The Date model.  | Yes | ``Null`` |
+| required: ``boolean`` | Whether the date is required. | No | ``True`` |
+| id: ``string`` | ID used to differentiate a component when multiple instances appear on the same page. | No | ``''`` |
+| placeholder: ``string`` | Placeholder text for the date picker input. | Yes | ``Null`` |
+| maxDate: ``Date`` | The maximum date the date picker should allow. | No | ``Null`` |
+| minDate: ``Date`` | The minimum date the date picker should allow. | No | ``Null`` |
+| startAt: ``Date`` | The date the date picker should start with. | No | ``Null`` |
 
 ---
 
@@ -196,12 +196,12 @@ import { SofNameModule } from '@softheon/forms';
 #### Properties
 | Name | Description | Required | Default |
 | :--- | :---------- | :---- | :---- |
-| name: Name | The Name model.  | Yes | Null |
-| required: boolean | Whether first and last name should be required. | No | True |
-| id: string | ID used to differentiate a component when multiple instances appear on the same page. | No | Empty String |
-| showMiddle: boolean | Whether middle name should be shown. | No | True |
-| showSuffix: boolean | Whether suffix should be shown. | No | True |
-| suffixOptions: Suffix[] | Array of suffixes to choose from. | No | Jr., Sr., III, IV |
+| name: ``Name`` | The Name model.  | Yes | ``Null`` |
+| required: ``boolean`` | Whether first and last name should be required. | No | ``True`` |
+| id: ``string`` | ID used to differentiate a component when multiple instances appear on the same page. | No | ``''`` |
+| showMiddle: ``boolean`` | Whether middle name should be shown. | No | ``True`` |
+| showSuffix: ``boolean`` | Whether suffix should be shown. | No | ``True`` |
+| suffixOptions: ``Suffix[]`` | Array of suffixes to choose from. | No | ``Suffix`` |
 
 #### **Additional Classes**
 
@@ -213,10 +213,10 @@ import { SofNameModule } from '@softheon/forms';
 
 | Name | Description |
 | :--- | ----------- |
-| firstName: string | The first name. |
-| middleName?: string | The middle name. |
-| lastName: string | The last name. |
-| suffix?: Suffix | The suffix. |
+| firstName: ``string`` | The first name. |
+| middleName?: ``string`` | The middle name. |
+| lastName: ``string`` | The last name. |
+| suffix?: ``Suffix`` | The suffix. |
 
 #### Suffix
 
@@ -249,15 +249,15 @@ import { SofPhoneNumberModule } from '@softheon/forms';
 #### Properties
 | Name | Description | Required | Default |
 | :--- | :---------- | :--- | :--- |
-| phoneNumber: PhoneNumber | The phone number model. | Yes | Null |
-| required: boolean | Whether the phone number is required. | No | True |
-| id: string | ID used to differentiate a component when multiple instances appear on the same page. | No | Empty String |
-| showPhoneType: boolean | Whether to ask for the phone type. | No | True |
-| showCallingCode: boolean | Whether to ask for the calling code. | No | False |
-| showExtensionCode: boolean | Whether to show the extension code. | No | True |
-| placeholder: string | The placeholder text for the input. | No | Phone Number |
-| placeholderExt: string | The placeholder text for the extension code. | No | Extension Code |
-| placeholderType: string | The place older text for the phone type. | No | Phone Type |
+| phoneNumber: ``PhoneNumber`` | The phone number model. | Yes | ``Null`` |
+| required: ``boolean`` | Whether the phone number is required. | No | ``True`` |
+| id: ``string`` | ID used to differentiate a component when multiple instances appear on the same page. | No | ``''`` |
+| showPhoneType: ``boolean`` | Whether to ask for the phone type. | No | ``True`` |
+| showCallingCode: ``boolean`` | Whether to ask for the calling code. | No | ``False`` |
+| showExtensionCode: ``boolean`` | Whether to show the extension code. | No | ``True`` |
+| placeholder: ``string`` | The placeholder text for the input. | No | ``'Phone Number'`` |
+| placeholderExt: ``string`` | The placeholder text for the extension code. | No | ``'Extension Code'`` |
+| placeholderType: ``string`` | The place older text for the phone type. | No | ``'Phone Type'`` |
 
 #### **Additional Classes**
 
@@ -269,17 +269,17 @@ This is the model for the phone number input. It includes the phone type, callin
 
 | Name | Description |
 | :--- | ----------- |
-| type: PhoneType | The type of phone number. Usually can be work, mobile or home. |
-| callingCode: string | The calling code for the phone number. I.e. U.S.A is 1. |
-| callingCodeName: string | The country name for the calling code. |
-| phoneNumber: string | The phone number. |
-| extensionCode: string | The extension code. |
+| type: ``PhoneType`` | The type of phone number. Usually can be work, mobile or home. |
+| callingCode: ``string`` | The calling code for the phone number. I.e. U.S.A is 1. |
+| callingCodeName: ``string`` | The country name for the calling code. |
+| phoneNumber: ``string`` | The phone number. |
+| extensionCode: ``string`` | The extension code. |
 
 #### Methods
 
 | Name | Description |
 | :--- | ----------- |
-| getCleanPhoneNumber(): string | Removes any paranthesis, hyphens, or spaces from the phone number. I.e. (012) 345-6789 => 0123456789 |
+| ``getCleanPhoneNumber(): string`` | Removes any paranthesis, hyphens, or spaces from the phone number. I.e. (012) 345-6789 => 0123456789 |
 | 
 
 #### Phone Type
@@ -316,10 +316,10 @@ import { SofSocialSecurityNumberModule } from '@softheon/forms';
 #### **Properties**
 | Name | Description | Required | Default |
 | :--- | :---------- | :--- | :--- |
-| ssn: string | The social security number model  | Yes | Null | 
-| required: boolean | Whether the social security number should be required. | No | True |
-| id: string | ID used to differentiate a component when multiple instances appear on the same page. | No | Empty String |
-| ssnChange: EventEmitter`<string>` | Social security number change event emitter. | No | EventEmitter`<string>` |
+| ssn: ``string`` | The social security number model  | Yes | ``Null`` | 
+| required: ``boolean`` | Whether the social security number should be required. | No | ``True`` |
+| id: ``string`` | ID used to differentiate a component when multiple instances appear on the same page. | No | ``''`` |
+| ssnChange: `EventEmitter<string>` | Social security number change event emitter. | No | `EventEmitter<string>` |
 
 ---
 
@@ -331,7 +331,24 @@ Coming Soon
 
 ### **Status Frame Component**
 
-Coming Soon
+#### `<softheon-form-ssn>` is a component used to display a frame around the given HTML content. It displays a green bar in the frame once the content inside the frame is valid.
+
+#### API reference for Status Frame Component
+
+```TypeScript
+import { SofStatusFrameModule } from '@softheon/forms';
+```
+
+#### **Properties**
+| Name | Description | Required | Default |
+| :--- | :---------- | :--- | :--- |
+| name: ``string`` | The name to be displayed in the status frame title  | No | Empty String | 
+| status: ``string`` | Status of the frame | No | complete, progress or edit |
+| valid: ``boolean`` | Whether the content in the frame is valid | No | False |
+| showHeader: ``boolean`` | Whether to show the header | No | True |
+| showStatus: ``boolean`` | Whether to show the status based on form validity | No | True |
+| minimizable: ``boolean`` | Whether the status frame component can be minimized/collapsed | No | False |
+| isMinimized: ``EventEmitter<boolean>`` | Emits whether the status frame is minimized/collapsed | No | ``EventEmitter<boolean>`` |
 
 ---
 
