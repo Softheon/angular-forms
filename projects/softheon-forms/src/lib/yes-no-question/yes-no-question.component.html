@@ -1,8 +1,8 @@
 <div provide-parent-form fxLayout="row wrap">
   <div sws-button-group--primary p-r-10>
-    <input type="radio" id="{{id}}Yes" name="{{id}}" [value]="yesValue" [(ngModel)]="boolean" [required]="required && !unknown" (change)="onChangeEvent(yesValue)" />
+    <input type="radio" id="{{id}}Yes" name="{{id}}Yes" [value]="yesValue" [(ngModel)]="boolean" [required]="required && !unknown" (change)="onChangeEvent(yesValue)" />
     <label for="{{id}}Yes">Yes</label>
-    <input type="radio" id="{{id}}No" name="{{id}}" [value]="noValue" [(ngModel)]="boolean" [required]="required && !unknown" (change)="onChangeEvent(noValue)" />
+    <input type="radio" id="{{id}}No" name="{{id}}No" [value]="noValue" [(ngModel)]="boolean" [required]="required && !unknown" (change)="onChangeEvent(noValue)" />
     <label for="{{id}}No">No</label>
     <input *ngIf="hasUnknown" type="radio" id="{{id}}Unknown" name="{{id}}Unknown" [value]="true" [(ngModel)]="unknown" [required]="required" (change)="onChangeEvent(null)" />
     <label *ngIf="hasUnknown" for="{{id}}Unknown">Unknown</label>

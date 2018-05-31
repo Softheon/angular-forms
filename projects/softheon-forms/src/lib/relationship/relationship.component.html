@@ -1,0 +1,10 @@
+<div provide-parent-form fxLayout="row wrap">
+  <mat-form-field *ngIf="!isSpouse" fxFlex="100%">
+    <mat-select id="{{id}}" name="{{id}}" placeholder="Relationship" [(ngModel)]="relationship"
+      [required]="required" (selectionChange)="onSelectionChange()">
+      <mat-option *ngFor="let relation of dropDownValues" [value]="relation">
+        {{relation}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

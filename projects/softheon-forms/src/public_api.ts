@@ -49,3 +49,11 @@ export * from './lib/status-frame/status-frame.module';
 /** Yes No Question Module */
 export * from './lib/yes-no-question/yes-no-question.component';
 export * from './lib/yes-no-question/yes-no-question.module';
+
+/** Relationship Module */
+export * from './lib/relationship/relationship.enum';
+export * from './lib/relationship/family-relationships';
+export * from './lib/relationship/tax-relationships';
+export * from './lib/relationship/legal-relationships';
+export * from './lib/relationship/relationship.component';
+export * from './lib/relationship/relationship.module';

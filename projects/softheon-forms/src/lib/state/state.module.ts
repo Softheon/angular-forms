@@ -17,7 +17,8 @@ import { StateComponent } from './state.component';
     FlexLayoutModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    SofDirectiveModule
   ],
   declarations: [StateComponent],
   exports: [StateComponent]

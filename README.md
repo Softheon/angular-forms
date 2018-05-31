@@ -300,7 +300,150 @@ export enum PhoneType {
 
 ### **Relationship Component**
 
-Coming Soon
+#### `<softheon-form-relationship>` is a component used to collect a user's relationship to the applicant. 
+
+#### API reference for Relationship Component
+
+```TypeScript
+import { SofRelationshipModule } from '@softheon/forms';
+```
+
+#### **Properties**
+| Name | Description | Required | Default |
+| :--- | :---------- | :--- | :--- |
+| id: `string` | ID used to differentiate a component when multiple instances appear on the same page. | No | `''` |
+| relationshipConst: `string` | Relationship category to use. Can be either family, legal or tax. | No | `family` |
+| required: `boolean` | Whether relationship input is required. | No | `False` |
+| relationshipOptions: `Relationship[]` | Array of available relationship options. | No | `[]` |
+| isSpouse: `boolean` | Whether the applicant is a spouse. | No | `False` |
+| relationship: `Relationship` | The relationship model. | Yes | `Null` |
+| relationshipChange: `EventEmitter<Relationship>` | Event emitter for relationship change event. | No | `EventEmitter<Relationship>` |
+
+#### **Additional Classes**
+
+#### Relationship Enumeration
+
+This is the enumeration of all possible relationship options. Note you can define and pass your relationship options via the relationshipOptions property defined above.
+
+```TypeScript
+export enum Relationship {
+    SPOUSE = 'Spouse',
+    PARENT = 'Parent',
+    SON_DAUGHTER = 'Son or Daughter',
+    STEPSON_STEPDAUGHTER = 'Stepchild',
+    GRANDCHILD = 'Grandchild',
+    SIBLING = 'Sibling',
+    DOMESTIC_PARTNER = 'Domestic Partner',
+    CHILD_OF_DOMESTIC_PARTNER = 'Child of Domestic Partner',
+    UNRELATED = 'Unrelated',
+    OTHER_RELATIVE = 'Other Relative',
+    STEP_PARENT = 'Step Parent',
+    AUNT_UNCLE = 'Aunt or Uncle',
+    NEPHEW_NIECE = 'Nephew or Niece',
+    GRANDPARENT = 'Grandparent',
+    FIRST_COUSIN = 'First Cousin',
+    PARENTS_DOMESTIC_PARTNER = 'Parent\'s Domestic Partner',
+    OTHER = 'Other',
+    BROTHER_IN_LAW_SISTER_IN_LAW = 'Sibling in law',
+    DAUGHTER_IN_LAW_SON_IN_LAW = 'Son or Daughter in law',
+    MOTHER_IN_LAW_FATHER_IN_LAW = 'Parent in law',
+    SPONSORED_DEPENDENT = 'Sponsored Dependent',
+    DEPENDENT_OF_A_MINOR_DEPENDENT = 'Dependent of Minor Dependent',
+    SELF = 'Self',
+  
+    //legal specific
+    FOSTER_CHILD = 'Foster Child',
+    COURT_APPOINTED_GUARDIAN = 'Court Appointed Guardian',
+    ADOPTED_CHILD = 'Adopted Child',
+    FORMER_SPOUSE = 'Former Spouse',
+    FOSTER_PARENT = 'formerParent',
+    GUARDIAN = 'Guardian',
+    ANNUITANT = 'Annuitant',
+    TRUSTEE = 'Trustee',
+    WARD = 'Ward',
+  
+    //Tax Specific
+    TAX_FILER = 'Tax Filer',
+    TAX_DEPENDENT = 'Tax Dependent',
+    COLLATERAL_DEPENDENT = 'Collateral Dependent',
+  
+    // Other
+    NONE = 'None of these'
+  }
+```
+
+#### Family Relationships
+
+Array of all family relationships.
+
+```TypeScript
+/** Enumeration for family relationships */
+export const FamilyRelationships: Relationship[] = [
+  Relationship.SPOUSE,
+  Relationship.PARENT,
+  Relationship.SON_DAUGHTER,
+  Relationship.STEPSON_STEPDAUGHTER,
+  Relationship.GRANDCHILD,
+  Relationship.SIBLING,
+  Relationship.DOMESTIC_PARTNER,
+  Relationship.CHILD_OF_DOMESTIC_PARTNER,
+  Relationship.UNRELATED,
+  Relationship.OTHER_RELATIVE,
+  Relationship.STEP_PARENT,
+  Relationship.AUNT_UNCLE,
+  Relationship.NEPHEW_NIECE,
+  Relationship.GRANDPARENT,
+  Relationship.FIRST_COUSIN,
+  Relationship.PARENTS_DOMESTIC_PARTNER,
+  Relationship.OTHER,
+  Relationship.BROTHER_IN_LAW_SISTER_IN_LAW,
+  Relationship.DAUGHTER_IN_LAW_SON_IN_LAW,
+  Relationship.MOTHER_IN_LAW_FATHER_IN_LAW,
+  Relationship.SPONSORED_DEPENDENT,
+  Relationship.DEPENDENT_OF_A_MINOR_DEPENDENT,
+  Relationship.SELF,
+];
+```
+
+#### Legal Relationships
+
+Array of all legal relationships.
+
+```TypeScript
+export const LegalRelationships: Relationship[] = [
+  Relationship.ADOPTED_CHILD,
+  Relationship.COURT_APPOINTED_GUARDIAN,
+  Relationship.FORMER_SPOUSE,
+  Relationship.FOSTER_CHILD,
+  Relationship.FOSTER_PARENT,
+  Relationship.GUARDIAN,
+  Relationship.ANNUITANT,
+  Relationship.TRUSTEE,
+  Relationship.WARD,
+  Relationship.OTHER,
+];
+```
+
+#### Tax Relationships
+
+Array of all tax relationships.
+
+```TypeScript
+export const TaxRelationships: Relationship[] = [
+  Relationship.TAX_FILER,
+  Relationship.TAX_DEPENDENT,
+  Relationship.COLLATERAL_DEPENDENT
+];
+```
+
+#### Relationship Helper
+
+Helper class providing methods for relationship component.
+
+#### **Properties**
+| Name | Description | 
+| :--- | :---------- | 
+| `getCounterRelationship(relationship: Relationship)` | Gets the counter relationship for the given relationship. For example param = parent, return = child. |
 
 ---
 
@@ -308,7 +451,7 @@ Coming Soon
 
 #### `<softheon-form-ssn>` is a component used to collect a user's social security number. It automatically supports masking the user's social security number as well.
 
-#### API reference for Softheon Social Security Number Component
+#### API reference for Social Security Number Component
 
 ```TypeScript
 import { SofSocialSecurityNumberModule } from '@softheon/forms';
