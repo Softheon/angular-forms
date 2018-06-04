@@ -20,6 +20,7 @@
         City is required.
       </mat-error>
     </mat-form-field>
+    <!--The State Code-->
     <div fxFlex.lt-md="100%" fxFlex.gt-xs="1 1 auto" *ngIf="!justZip">
       <softheon-form-state [(state)]="address.stateCode" [id]="id" [defaultState]="defaultState" [readonly]="readonly || disableState" [required]="required"></softheon-form-state>
     </div>

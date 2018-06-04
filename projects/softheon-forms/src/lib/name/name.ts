@@ -15,4 +15,20 @@ export class Name {
 
   /** The suffix */
   public suffix?: Suffix;
+
+    /**
+   * Gets the full name
+   * @returns The full name
+   */
+  public get fullName(): string {
+    let fullName = this.firstName;
+    if (this.middleName) {
+      fullName = `${fullName} ${this.middleName}`;
+    }
+    fullName = `${fullName} ${this.lastName}`;
+    if (this.suffix) {
+      fullName = `${fullName} ${this.suffix}`;
+    }
+    return fullName;
+  }
 }
