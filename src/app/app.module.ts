@@ -14,7 +14,8 @@ import {
   SofPhoneNumberModule,
   SofStatusFrameModule,
   SofYesNoQuestionModule,
-  SofRelationshipModule
+  SofRelationshipModule,
+  SofCurrencyModule
 
 } from 'softheon-forms';
 
@@ -34,7 +35,8 @@ import {
     SofPhoneNumberModule,
     SofStatusFrameModule,
     SofYesNoQuestionModule,
-    SofRelationshipModule
+    SofRelationshipModule,
+    SofCurrencyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -57,3 +57,7 @@ export * from './lib/relationship/tax-relationships';
 export * from './lib/relationship/legal-relationships';
 export * from './lib/relationship/relationship.component';
 export * from './lib/relationship/relationship.module';
+
+/** Currency Module */
+export * from './lib/currency/currency.component';
+export * from './lib/currency/currency.module';

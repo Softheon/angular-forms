@@ -1,6 +1,6 @@
 {
   "name": "@softheon/forms",
-  "version": "1.9.4",
+  "version": "1.10.1",
   "description": "Module for softheon forms",
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
     "@angular/flex-layout": "^6.0.0-beta.15",
     "@angular/material-moment-adapter": "^6.0.0",
     "angular2-text-mask": "^8.0.0",
-    "moment": "^2.22.1"
+    "moment": "^2.22.1",
+    "text-mask-addons": "3.7.2"
   }
 }

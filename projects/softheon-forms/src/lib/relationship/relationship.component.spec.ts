@@ -3,6 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatFormFieldModule, MatSelectModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { RelationshipComponent } from './relationship.component';
 
@@ -17,7 +18,8 @@ describe('EnrollForm/RelationshipComponent', () => {
         FormsModule,
         FlexLayoutModule,
         MatFormFieldModule,
-        MatSelectModule
+        MatSelectModule,
+        BrowserAnimationsModule
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })

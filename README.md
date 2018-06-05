@@ -151,7 +151,32 @@ Coming Soon
 
 ### **Currency Component**
 
-Coming Soon
+#### `<softheon-form-currency>` is a component used for gathering currency amount.
+
+#### API reference for Softheon Currency Component
+
+```TypeScript
+import { SofCurrencyModule } from '@softheon/forms';
+```
+#### Properties
+| Name | Description | Required | Default |
+| :--- | :---------- | :-- | :-- |
+| id: `string `| ID used to differentiate a component when multiple instances appear on the same page. | No | `''` |
+| value: `string` | The currency model | Yes | `Null` |
+| valueChange: `EventEmitter<string>` | The currency amount output event emitter | No | `EventEmitter<string>` |
+| required: `boolean` | Whether the currency component is required. | No | `True` |
+| prefix: `string` | What to display before the amount. | No | `'$'` |
+| suffix: `string` | What to display after the amount. | No | `''` |
+| includeThousandsSeparator: `boolean` | Whether or not to separate thousands. | No | `True` |
+| thousandsSeparatorSymbol: `string` | Character with which to separate thousands. | No | `','` |
+| allowDecimal: `boolean` | Whether to allow the user to enter a fraction with the amount. | No | `True` |
+| decimalSymbol: `string` | Character that will act as a decimal point. | No | `.` |
+| decimalLimit: `number` | How many digits to allow after the decimal. | No | `2` |
+| integerLimit: `number`| Limit the maximum currency amount. Set to null for no limit. | No | `Null` |
+| requireDecimal: `boolean` | Whether to always include a decimal point and placeholder for decimal digits after the integer. | No | `False` |
+| allowNegative: `boolean` | Whether to allow negative numbers. | No | `False` |
+| allowLeadingZeroes: `boolean` | Whether to allow leading zeroes. | No | `False` |
+| placeHolder: `string` | The placeholder text for the input. | No | `Amount` |
 
 ---
 
