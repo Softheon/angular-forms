@@ -15,7 +15,7 @@ export class PhoneNumber {
   public callingCodeName: string;
 
   /** The phone number */
-  public phoneNumber: string;
+  public number: string;
 
   /** The phone number's extension, always optional */
   public extensionCode: string;
@@ -66,8 +66,8 @@ export class PhoneNumber {
    * Removes any parenthesis, hyphens, or spaces from the phone number. I.e. (012) 345-6789 => 0123456789
    */
   public getCleanPhoneNumber(): string {
-    if (this.phoneNumber) {
-      return this.phoneNumber.replace('(', '').replace(')', '').replace(' ', '').replace('-', '').trim();
+    if (this.number) {
+      return this.number.replace('(', '').replace(')', '').replace(' ', '').replace('-', '').trim();
     }
 
     return null;
@@ -77,7 +77,7 @@ export class PhoneNumber {
    * Prints the phone number
    */
   public toString(): string {
-    return `${this.displayName} ${this.phoneNumber} ${this.extensionCode ? this.extensionCode : ''}`;
+    return `${this.displayName} ${this.number} ${this.extensionCode ? this.extensionCode : ''}`;
   }
 
   /**

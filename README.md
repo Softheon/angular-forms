@@ -88,6 +88,8 @@ import { SofAddressModule } from '@softheon/forms';
 | :- | :-| :- | :- |
 | address: ``Address`` | The address model. | Yes | ``Null`` |
 | required: ``boolean`` | Whether the address is required. | No | ``True`` |
+| streetRequired: `boolean` | Whether the street address is required. Overrides required property. | No | `Null` |
+| zipRequired: `boolean` | Whether the zip code is required. Overrides the required property. | No | `Null` |
 | id: ``string ``| ID used to differentiate a component when multiple instances appear on the same page. | No | ``''`` |
 | readonly: ``boolean`` | Whether the component should be readonly. | No | ``False`` |
 | showStreetName2: ``boolean`` | Whether to show Apt./Ste. input. | No | ``False`` |
@@ -298,7 +300,7 @@ This is the model for the phone number input. It includes the phone type, callin
 | type: ``PhoneType`` | The type of phone number. Usually can be work, mobile or home. |
 | callingCode: ``string`` | The calling code for the phone number. I.e. U.S.A is 1. |
 | callingCodeName: ``string`` | The country name for the calling code. |
-| phoneNumber: ``string`` | The phone number. |
+| number: ``string`` | The phone number. |
 | extensionCode: ``string`` | The extension code. |
 
 #### Methods

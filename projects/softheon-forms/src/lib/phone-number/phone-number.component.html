@@ -14,7 +14,7 @@
     </mat-error>
   </mat-form-field>
   <mat-form-field fxFlex.lt-md="100%" fxFlex.gt-sm="1 1 auto">
-    <input name="phoneNumber{{id}}" id="phoneNumber{{id}}" matInput placeholder="Phone Number" [textMask]="{mask: getPhoneMask()}" [required]="required" [(ngModel)]="phoneNumber.phoneNumber" #phoneSelector="ngModel" [numberOfDigits]="determineDigits()" maxlength="16" />
+    <input name="phoneNumber{{id}}" id="phoneNumber{{id}}" matInput placeholder="Phone Number" [textMask]="{mask: getPhoneMask()}" [required]="required" [(ngModel)]="phoneNumber.number" #phoneSelector="ngModel" [numberOfDigits]="determineDigits()" maxlength="16" />
     <mat-error *ngIf="phoneSelector?.errors?.required">
       Phone Number is required.
     </mat-error>

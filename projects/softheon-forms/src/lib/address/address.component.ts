@@ -27,6 +27,14 @@ export class AddressComponent implements OnInit {
   @Input()
   public required: boolean = true;
 
+  /** Whether the street is required. Defaults to null. Overrides required property */
+  @Input()
+  public streetRequired: boolean = null;
+
+  /** Whether the zip code is required. Defaults to null. Overides required property */
+  @Input()
+  public zipRequired: boolean = null;
+
   /** Whether the street name 2 field should be shown */
   @Input()
   public showStreetName2: boolean = true;
