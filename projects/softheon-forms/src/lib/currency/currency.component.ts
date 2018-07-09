@@ -104,12 +104,11 @@ export class CurrencyComponent implements OnInit {
   }
 
   /**
-   * Event handler for currency input value change
-   * @param newVal The new currency value
+   * Event handler for currency input value change   
    */
-  public onChange(newVal: string): void {
+  public onChange(): void {
     // Update the amount value to be a number
-    let amount = this.cleanseValue(newVal);
+    let amount = this.cleanseValue(this.value);
     this.valueChange.emit(amount);
   }
 

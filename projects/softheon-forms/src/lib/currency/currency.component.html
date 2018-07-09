@@ -1,7 +1,7 @@
 <div provide-parent-form fxLayout="row wrap">
   <mat-form-field fxFlex="100%">
     <input id="currency{{id}}" name="currency{{id}}" #currency="ngModel" [(ngModel)]="value" matInput placeholder="{{placeholder}}"
-      [textMask]="{mask: mask}" (change)="onChange($event.target.value)" [required]="required" />
+      [textMask]="{mask: mask}" (ngModelChange)="onChange()" [required]="required" />
     <mat-error id="currencyError{{id}}" *ngIf="currency?.errors?.required && currency?.touched">
       {{placeholder}} is required.
     </mat-error>
