@@ -31,6 +31,8 @@ export class LettersOnlyDirective {
         (e.keyCode === 67 && e.ctrlKey) ||
         // Allow: Ctrl+X
         (e.keyCode === 88 && e.ctrlKey) ||
+        //Allow: Space
+        (e.keyCode === 32) ||
         // Allow: home, end, left, right
         (e.keyCode >= 35 && e.keyCode <= 39)) {
         // let it happen, don't do anything
