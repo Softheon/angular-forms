@@ -38,6 +38,7 @@ export class StatusFrameComponent implements OnInit {
   @Output()
   public isMinimized: EventEmitter<boolean> = new EventEmitter<boolean>();
 
+  @Input()
   /** True if the component is minimized */
   public minimized: boolean;
 
