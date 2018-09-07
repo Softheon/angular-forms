@@ -97,6 +97,10 @@ import { SofAddressModule } from '@softheon/forms';
 | defaultState: ``string`` | The default state. | No | ``Null`` |
 | showZipCodeExt: ``boolean`` | Whether to allow zip code to be greater than 5 digits. | No | ``True`` |
 | justZip: ``boolean`` | Whether only the zip code field should be shown. | No | ``False`` |
+| street1Placeholder: ``string`` | Placeholder text for street 1 | No | ``Street`` |
+| street2Placeholder: ``string`` | Placeholder text for street 2 | No | ``Apt./Ste. #`` |
+| cityPlaceholder: ``string`` | Placeholder text for city | No | ``City`` |
+| zipCodePlaceholder: ``string`` | Placeholder text for city | No | ``Zip Code`` |
 
 ### **Additional Classes**
 

@@ -2,20 +2,20 @@
   <div fxLayout="row wrap" fxLayoutGap="1%" fxLayoutAlign="start" *ngIf="!justZip">
     <!--Street 1-->
     <mat-form-field fxFlex.lt-md="100%" fxFlex.gt-xs="3 1 auto">
-      <input id="streetName1{{id}}" name="streetName1{{id}}" matInput placeholder="Street" [required]="streetRequired === null ? required : streetRequired" [(ngModel)]="address.streetName1" #streetName1="ngModel" [readonly]="readonly" />
+      <input id="streetName1{{id}}" name="streetName1{{id}}" matInput placeholder="{{street1Placeholder}}" [required]="streetRequired === null ? required : streetRequired" [(ngModel)]="address.streetName1" #streetName1="ngModel" [readonly]="readonly" />
       <mat-error id="streetName1Error{{id}}" *ngIf="streetName1?.errors?.required">
         Street is required.
       </mat-error>
     </mat-form-field>
     <!--Street 2-->
     <mat-form-field fxFlex.lt-md="100%" fxFlex.gt-xs="1 1 auto" *ngIf="showStreetName2">
-      <input id="streetName2{{id}}" name="streetName2{{id}}" matInput placeholder="Apt./Ste. #" [(ngModel)]="address.streetName2" #streetName2="ngModel" [readonly]="readonly" />
+      <input id="streetName2{{id}}" name="streetName2{{id}}" matInput placeholder="{{street2Placeholder}}" [(ngModel)]="address.streetName2" #streetName2="ngModel" [readonly]="readonly" />
     </mat-form-field>
   </div>
   <div fxLayout="row wrap" fxLayoutGap="1%" fxLayoutAlign="start">
     <!--The city-->
     <mat-form-field fxFlex.lt-md="100%" fxFlex.gt-xs="3 1 auto" *ngIf="!justZip">
-      <input id="city{{id}}" name="city{{id}}" matInput placeholder="City" [required]="required" [(ngModel)]="address.cityName" #city="ngModel" [readonly]="readonly" [lettersOnly]="true" />
+      <input id="city{{id}}" name="city{{id}}" matInput placeholder="{{cityPlaceholder}}" [required]="required" [(ngModel)]="address.cityName" #city="ngModel" [readonly]="readonly" [lettersOnly]="true" />
       <mat-error id="cityError{{id}}" *ngIf="city?.errors?.required">
         City is required.
       </mat-error>
@@ -26,7 +26,7 @@
     </div>
     <!--The zip code-->
     <mat-form-field fxFlex.lt-md="100%" fxFlex.gt-xs="3 1 auto">
-      <input id="zipCode{{id}}" name="zipCode{{id}}" matInput placeholder="Zip code" [required]="zipRequired === null ? required : zipRequired"
+      <input id="zipCode{{id}}" name="zipCode{{id}}" matInput placeholder="{{zipCodePlaceholder}}}" [required]="zipRequired === null ? required : zipRequired"
              [(ngModel)]="address.zipCode" #zipCode="ngModel" [textMask]="{mask: zipCodeMask, guide: false}" maxlength="10"
              [readonly]="readonly" [numberOfDigitsRange]="zipCodeLengthRange" />
       <mat-error id="zipCodeError{{id}}" *ngIf="zipCode?.errors?.required">

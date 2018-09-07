@@ -55,6 +55,22 @@ export class AddressComponent implements OnInit {
   @Input()
   public justZip: boolean;
 
+  /** Placeholder text for street 1 */
+  @Input()
+  public street1Placeholder: string = 'Street';
+
+  /** Placeholder text for street 2 */
+  @Input()
+  public street2Placeholder: string = 'Apt./Ste. #';
+
+  /** Placeholder text for city */
+  @Input()
+  public cityPlaceholder: string = 'City';
+
+  /** Placeholder text for zip */
+  @Input()
+  public zipCodePlaceholder: string = 'Zip Code';
+
   /** The zip code mask */
   public zipCodeMask: (RegExp | string)[];
 
