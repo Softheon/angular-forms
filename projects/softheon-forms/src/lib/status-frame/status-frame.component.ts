@@ -28,7 +28,7 @@ export class StatusFrameComponent implements OnInit {
 
   /**Shows the footer */
   @Input()
-  public showFooter: boolean = false;
+  public showFooter: boolean = true;
 
   /** Set true to show the status icon based on form validity */
   @Input()
