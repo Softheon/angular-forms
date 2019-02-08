@@ -1,5 +1,5 @@
 <div>
-  <mat-card class="status-frame" [ngClass]="pickClass()" [class.no-header]="!showHeader">
+  <mat-card class="status-frame" [ngClass]="pickClass()" [class.no-header]="!showHeader" [class.no-footer]="!showFooter">
     <div *ngIf="showHeader">
       <mat-card-title p-h-15 m-b-0 class="status-panel-title" fxLayout="row">
         <div fxFlex="75%" align-self-center>
@@ -20,7 +20,7 @@
             <ng-content select="[status-frame-header]"></ng-content>
           </div>
         </div>
-        
+
         <div fxFlex="2%" *ngIf="minimizable">
           <div class="minimizeBtn" fxLayoutAlign="end" (click)="toggleMinimized()" text-secondary>
             <span *ngIf="minimized" sws-tooltip-left>
@@ -34,14 +34,16 @@
           </div>
 
         </div>
-        
+
       </mat-card-title>
     </div>
     <mat-card-content class="status-frame-content" [hidden]="minimized" p-h-15 p-t-15 p-b-15>
       <ng-content></ng-content>
     </mat-card-content>
-    <mat-card-footer p-t-0 p-b-15 p-h-15 class="status-frame-footer">
-      <ng-content select="[status-frame-footer]"></ng-content>
-    </mat-card-footer>
+    <div *ngIf="showFooter">
+      <mat-card-footer p-t-0 p-b-15 p-h-15 class="status-frame-footer">
+        <ng-content select="[status-frame-footer]"></ng-content>
+      </mat-card-footer>
+    </div>
   </mat-card>
 </div>
